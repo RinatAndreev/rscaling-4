@@ -1,0 +1,66 @@
+:root {
+  --bg: #131315;
+  --bg-raised: #1a1a1d;
+  --border: rgba(245, 244, 240, 0.1);
+  --border-strong: rgba(245, 244, 240, 0.18);
+  --text: #f5f4f0;
+  --text-muted: #9c9ba1;
+  --accent: #e14b3c;
+  --accent-hover: #c93f32;
+  --accent-tint: rgba(225, 75, 60, 0.12);
+
+  --font-display: 'Instrument Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --content-width: 1120px;
+  --edge: 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
